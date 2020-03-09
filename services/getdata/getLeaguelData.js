@@ -1,7 +1,8 @@
 'use strict';
 
 exports.GetLeaguel = () => {
-    return [
+    return {
+        leagues: [
             {
                 "leagueId": 1,
                 "color": "#9933FF",
@@ -111,4 +112,5 @@ exports.GetLeaguel = () => {
                 "areaId": "1"
             }
         ]
+    }
 }

@@ -27,5 +27,6 @@ server.listen(process.env.PORT || global._default._SEVER_PORT_, function () {
 
 app.use('/api/getleagues', async (req, res, next) => {
     const _data = getleaguelist.GetLeaguel();
+    res.header("Access-Control-Allow-Origin","*");
     res.status(200).json(_data);
 })
