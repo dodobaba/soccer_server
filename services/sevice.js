@@ -1,7 +1,8 @@
 'use strict';
 
 const getleaguelist = require("./getdata/getLeaguelData");
-const getteams = require("./getdata/getTeamsData")
+const getteams = require("./getdata/getTeamsData");
+const getschedule = require("./getdata/getSchedule");
 
 let express = require('express'),
     app = express(),
@@ -34,6 +35,12 @@ app.use('/api/getleagues', async (req, res, next) => {
 
 app.use('/api/getteams', async (req, res, next) => {
     const _data = getteams.getTeams();
+    res.header("Access-Control-Allow-Origin","*");
+    res.status(200).json(_data);
+})
+
+app.use('/api/getschedule', async (req, res, next) => {
+    const _data = getschedule.GetSchedule();
     res.header("Access-Control-Allow-Origin","*");
     res.status(200).json(_data);
 })
