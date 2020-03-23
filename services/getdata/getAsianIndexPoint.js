@@ -1,4 +1,6 @@
 'use strict';
+//压盘指数单场
+
 
 exports.GetAsianIndexPoint = () => {
     return {

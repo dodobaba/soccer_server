@@ -1,3 +1,7 @@
+'use strict';
+//欧盘指数单场历史
+
+
 exports.GetEuropeanIndexHistrory = () => {
     return {
         GameId: "1173677",

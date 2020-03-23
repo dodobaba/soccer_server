@@ -1,4 +1,6 @@
 'use strict';
+//欧盘指数单场
+
 
 exports.GetEuropeanIndexPoint = () => {
     return {

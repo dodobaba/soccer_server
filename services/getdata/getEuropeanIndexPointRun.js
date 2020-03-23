@@ -1,3 +1,6 @@
+'use strict';
+//欧盘指数单场走地
+
 exports.GetEuropeanIndexPointRun = () => {
     return {
         GameId: "1173677",

@@ -1,8 +1,10 @@
 'use strict';
+//压盘指数列表
 
-exports.GetAsianIndexHistrory = () => {
+
+exports.GetAsianIndexList = () => {
     return {
-        AsianIndexHistrory: [
+        AsianIndexList: [
             {
                 Cid: '3000181',
                 Name: 'Bet365',
