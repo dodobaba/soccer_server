@@ -2,10 +2,10 @@
 //欧盘指数单场历史
 
 
-exports.GetEuropeanIndexHistrory = () => {
+exports.GetEuropeanIndexHistory = () => {
     return {
         GameId: "1173677",
-        EuropeanIndexHistrory: [
+        EuropeanIndexHistory: [
             {
                 Cid: '40000',
                 Name: '',

@@ -3,6 +3,7 @@
 const getleaguelist = require("./getdata/getLeaguelData");
 const getteams = require("./getdata/getTeamsData");
 const getschedule = require("./getdata/getSchedule");
+const getindexpoint = require('./factroy/getIndexPoint');
 
 let express = require('express'),
     app = express(),
@@ -41,6 +42,12 @@ app.use('/api/getteams', async (req, res, next) => {
 
 app.use('/api/getschedule', async (req, res, next) => {
     const _data = getschedule.GetSchedule();
+    res.header("Access-Control-Allow-Origin","*");
+    res.status(200).json(_data);
+})
+
+app.use('/api/getindexpoint',async (req,res,next)=>{
+    const _data = getindexpoint.fetchAll();
     res.header("Access-Control-Allow-Origin","*");
     res.status(200).json(_data);
 })
