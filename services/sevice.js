@@ -47,7 +47,7 @@ app.use('/api/getschedule', async (req, res, next) => {
 })
 
 app.use('/api/getindexpoint',async (req,res,next)=>{
-    const _data = getindexpoint.fetchAll();
+    const _data = await getindexpoint.fetchAll();
     res.header("Access-Control-Allow-Origin","*");
     res.status(200).json(_data);
 })
