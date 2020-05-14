@@ -4,7 +4,8 @@ const getleaguelist = require("./getdata/getLeaguelData");
 const getteams = require("./getdata/getTeamsData");
 const getschedule = require("./getdata/getSchedule");
 const getindexpoint = require('./factroy/getIndexPoint');
-
+const config = require('../config');
+console.log(config.RemoteAPIS.getschedulebydate.uri);
 let express = require('express'),
     app = express(),
     server = require('http').createServer(app),
